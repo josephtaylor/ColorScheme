@@ -24,6 +24,14 @@
                   <finalName>ColorScheme</finalName>
               </configuration>
           </plugin>
+
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-javadoc-plugin</artifactId>
+              <configuration>
+                  <reportOutputDirectory>reference</reportOutputDirectory>
+              </configuration>
+          </plugin>
       </plugins>
   </build>
 </project>
