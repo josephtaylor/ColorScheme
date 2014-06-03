@@ -13,10 +13,10 @@ import processing.core.PImage;
  */
 class ImageColorSchemeGenerator {
 
-  private static final int THRESHOLD = 5;
+  private static final int THRESHOLD = 10;
   private static final int GRAY_THRESHOLD = 5;
 
-  private static final int NUM_COLORS = 5;
+  private static final int NUM_COLORS = 10;
 
   static Palette readFile(String fileName, PApplet parent) {
     PImage image = parent.loadImage(fileName);
@@ -24,8 +24,8 @@ class ImageColorSchemeGenerator {
 
     Map<Integer, List<Integer>> colorMap = generateColorMap(image.pixels, parent);
 
-    List<Integer> topColors = new ArrayList<Integer>();
-    findTopColors(colorMap, topColors, parent, NUM_COLORS);
+    List<Integer> tempTopColors = new ArrayList<Integer>();
+    List<Integer> topColors = randomTopColors(colorMap, tempTopColors, parent, NUM_COLORS);
 
     ColorSet colorSet = new ColorSet();
     for (Integer color : topColors) {
@@ -40,6 +40,17 @@ class ImageColorSchemeGenerator {
     palette.addColorSet(colorSet);
 
     return palette;
+  }
+
+  private static List<Integer> randomTopColors(final Map<Integer, List<Integer>> colorMap, List<Integer> topColors, final PApplet parent, final int numColors) {
+    List<Integer> colors = new ArrayList<Integer>();
+    findTopColors(colorMap, topColors, parent, numColors * 4);
+    for(int i = 0; i < numColors; i++) {
+      int index = (int) parent.random(topColors.size());
+      colors.add(topColors.get(index));
+      topColors.remove(index);
+    }
+    return colors;
   }
 
   private static void findTopColors(final Map<Integer, List<Integer>> colorMap,
