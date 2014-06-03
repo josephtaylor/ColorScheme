@@ -24,7 +24,7 @@ import processing.core.PApplet;
 
 class Parser {
 
-  private static final List<String> IMAGE_FILE_TYPES = new ArrayList<String>();
+  public static final List<String> IMAGE_FILE_TYPES = new ArrayList<String>();
 
   static {
     IMAGE_FILE_TYPES.add(".jpg");
@@ -50,6 +50,15 @@ class Parser {
   private static boolean isAnImageFile(String fileName) {
     for (String type : IMAGE_FILE_TYPES) {
       if (fileName.toLowerCase().endsWith(type)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  static boolean isAnInternetImageFile(String fileName) {
+    for (String type : IMAGE_FILE_TYPES) {
+      if (fileName.toLowerCase().endsWith(type) && fileName.startsWith("http")) {
         return true;
       }
     }
