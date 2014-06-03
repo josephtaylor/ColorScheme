@@ -9,15 +9,10 @@ To download the library for use with Processing visit the [website](http://josep
 This allows you to load ColorSchemes in a number of ways:
 
 1. .xml files generated from [colorschemedesigner.com](http://colorschemedesigner.com)
-
 you will get back a Pallete which contains ColorSets of Colors, much like what you see displayed on the website.
-
 2. .ase files generated from Adobe products.
-
 only RGB colors are supported, currently.
-
 3. by passing in an image file.
-
 a ColorScheme will be generated based on the most common colors in the image (with a bit of randomness so you won't get the same one every time).
 
 
