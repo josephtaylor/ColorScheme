@@ -1,29 +1,31 @@
 #!/bin/bash
 
 echo ' -- building with maven'
-mvn clean install
+mvn clean package
 echo ' -- generating javadocs'
 mvn javadoc:javadoc
 
 echo ' -- moving javadocs'
-cd reference
+cd target/reference
 cp -rv apidocs/* .
 rm -rf apidocs
-cd ..
+cd ../..
 
 echo ' -- copying jar to library folder'
-cp -v ./target/*.jar ./library/
+mkdir target/library
+cp -v target/ColorScheme.jar target/library/
 
 echo ' -- move everything to target/ColorScheme'
 mkdir target/ColorScheme
-cp -r src target/ColorScheme/
-cp -r reference target/ColorScheme/
-cp -r examples target/ColorScheme/
-cp -r library target/ColorScheme/
+cp -v library.properties target/ColorScheme/
+cp -rv src target/ColorScheme/
+cp -rv target/reference target/ColorScheme/
+cp -rv examples target/ColorScheme/
+cp -rv target/library target/ColorScheme/
 
 echo ' -- generate zip file '
 cd target
-zip -r ColorScheme.zip ColorScheme
+zip -rv ColorScheme.zip ColorScheme
 
 
 

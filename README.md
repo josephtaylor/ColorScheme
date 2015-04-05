@@ -8,7 +8,7 @@ To download the library for use with Processing visit the [website](http://josep
 ## Features
 This allows you to load ColorSchemes in a number of ways:
 
-1. .xml files generated from [colorschemedesigner.com](http://colorschemedesigner.com)
+1. .xml files generated from [paletton.com](http://paletton.com)
 2. .ase files generated from Adobe products.
 3. by passing in an image file.
 
@@ -24,6 +24,14 @@ colorScheme.getPalette();
 Alternately, you can access a java.util.List of Color objects by calling:
 ```java
 colorScheme.getColors();
+```
+The colors can be accessed directly as a List of Integers by calling:
+```java
+colorScheme.toIntegerArray();
+```
+If you prefer to work with primitive arrays. You can get an array of ints by calling:
+```java
+colorScheme.toArray();
 ```
 
 ## Building the library
