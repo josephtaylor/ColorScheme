@@ -15,10 +15,10 @@
 -docencoding
 'UTF-8'
 -doctitle
-'ColorScheme 1.0.1 API'
+'ColorScheme 1.0.2 API'
 -linkoffline
 'http://docs.oracle.com/javase/7/docs/api' '/opt/dev/ColorScheme/target/javadoc-bundle-options'
 -use
 -version
 -windowtitle
-'ColorScheme 1.0.1 API'
+'ColorScheme 1.0.2 API'
