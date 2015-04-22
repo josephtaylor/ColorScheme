@@ -1,9 +1,9 @@
 /*  
-    example illustrating the use of an image file.
-    must be connected to the internet for this to work.
-    
-    this displays a grid of the colorScheme below the source image.
-*/
+ *   This is an example illustrating the use of an image file.
+ *   You must be connected to the internet for this to work.
+ *
+ *   This displays a grid of the colorScheme below the source image.
+ */
 import jto.colorscheme.*;
 
 ColorScheme cs;
@@ -19,7 +19,7 @@ void setup() {
   noStroke();
   rectMode(CORNERS);
   
-  //load the image set the size
+  //load the image and set the size
   PImage image = loadImage(FILE);
   size(image.width, image.height + image.height / 3);
   

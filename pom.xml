@@ -4,7 +4,7 @@
     <groupId>jto.colorscheme</groupId>
     <artifactId>ColorScheme</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <name>ColorScheme</name>
     <url>http://josephtaylor.github.io/ColorScheme</url>
     <dependencies>
