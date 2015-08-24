@@ -7,13 +7,15 @@
     <version>1.0.2</version>
     <name>ColorScheme</name>
     <url>http://josephtaylor.github.io/ColorScheme</url>
+
     <dependencies>
         <dependency>
             <groupId>org.processing</groupId>
             <artifactId>processing-core</artifactId>
-            <version>2.2.1</version>
+            <version>3.0b4</version>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
