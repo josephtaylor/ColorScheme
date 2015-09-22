@@ -15,13 +15,13 @@ static final String FILE =
     "10990632_1421374984824307_988158500_n.jpg";
 
 void setup() {
+  size(640, 854);
   background(255);
   noStroke();
   rectMode(CORNERS);
   
-  //load the image and set the size
+  //load the image
   PImage image = loadImage(FILE);
-  size(image.width, image.height + image.height / 3);
   
   //create our color scheme object
   cs = new ColorScheme(FILE, this);
@@ -57,5 +57,3 @@ void setup() {
 void draw() {
   noLoop();  
 }
-
-
