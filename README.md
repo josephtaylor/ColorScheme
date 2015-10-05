@@ -1,6 +1,8 @@
 ColorScheme
 ===========
 
+![ColorScheme](https://raw.githubusercontent.com/josephtaylor/ColorScheme/gh-pages/colorWheel-01.png)
+
 A color scheme importing library for Processing.
  
 To download the library for use with Processing visit the [website](http://josephtaylor.github.io/ColorScheme).
