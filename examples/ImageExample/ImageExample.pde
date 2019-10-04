@@ -8,11 +8,8 @@ import jto.colorscheme.*;
 
 ColorScheme cs;
 
-// an image from instagram
-static final String FILE = 
-    "https://igcdn-photos-d-a.akamaihd.net/" +
-    "hphotos-ak-xaf1/t51.2885-15/" +
-    "10990632_1421374984824307_988158500_n.jpg";
+// an image from pexels
+static final String FILE = "https://images.pexels.com/photos/417344/pexels-photo-417344.jpeg";
 
 void setup() {
   size(640, 854);
